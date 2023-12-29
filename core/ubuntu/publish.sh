@@ -5,9 +5,9 @@ DIR=$(pwd)
 echo $DIR
 
 # publish intermediate images
-# cd $DIR/001_nvim/ && chmod +x publish.sh && ./publish.sh
-# cd $DIR/002_lazyvim/ && chmod +x publish.sh && ./publish.sh
-# cd $DIR/003_sdk/ && chmod +x publish.sh && ./publish.sh
+cd $DIR/001_nvim/ && chmod +x publish.sh && ./publish.sh
+cd $DIR/002_lazyvim/ && chmod +x publish.sh && ./publish.sh
+cd $DIR/003_sdk/ && chmod +x publish.sh && ./publish.sh
 cd $DIR/004_dotfiles/ && chmod +x publish.sh && ./publish.sh
 
 
