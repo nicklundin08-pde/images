@@ -5,7 +5,7 @@ IMAGE="nlundin08/pde"
 TAG="ubuntu_nvim"
 IMAGE_TAG="$IMAGE:$TAG"
 
-source ../../.env
+source ../../../.env
 echo 'Executing docker login'
 echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
 
