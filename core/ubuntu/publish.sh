@@ -22,17 +22,16 @@ publish_image(){
     docker push $IMAGE_TAG
 }
 
-# SKIPS=("ubuntu_nvim/" "")
+SKIPS=("001-ubuntu_nvim/" "")
 IFS='-'
 for d in */ ; do
     DIRECTORY=$d
-    # echo "$d"
-    # if [[ $(echo ${SKIPS[@]} | fgrep -w $d) ]]
-    # then
-    #     echo "    Should skip"
-    # else
-    #     echo "    Should not skip"
-    # fi
+    if [[ $(echo ${SKIPS[@]} | fgrep -w $d) ]]
+    then
+        echo "    Should skip"
+    else
+        echo "    Should not skip"
+    fi
     read -ra elements <<< "$d"
     TAG_TO_PUBLISH=${elements[1]}
     SANITIZED_TAG=${TAG_TO_PUBLISH%/}
